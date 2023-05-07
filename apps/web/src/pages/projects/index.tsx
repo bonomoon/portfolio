@@ -1,12 +1,11 @@
 import Head from "next/head";
 
-export default function Home() {
+export default function Projects() {
   return (
     <div>
       <Head>
-        <title>Bong-oh Moon</title>
+        <title>Projects | Bong-oh Moon</title>
       </Head>
-
     </div>
   );
 }

@@ -3,7 +3,11 @@
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"]
+    }
   },
   "include": ["src", "next-env.d.ts"]
 }
