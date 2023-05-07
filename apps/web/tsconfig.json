@@ -6,7 +6,8 @@
     "outDir": "dist",
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["public/*"]
     }
   },
   "include": ["src", "next-env.d.ts"]

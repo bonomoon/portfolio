@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Menu, MenuItemProps } from "@components/molecules/Menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import { Menu, MenuItemProps } from "@components/molecules/Menu";
+import Logo from "@assets/Logo.svg";
 
 /**
  * Styled Navbar wrapper component.
@@ -19,7 +20,7 @@ const NavbarWrapper = styled.div`
 /**
  * Styled Logo component.
  */
-const Logo = styled(Link)`
+const LogoLink = styled(Link)`
   font-family: "Inter", san-serif;
   font-size: 1.625rem;
   font-weight: bold;
@@ -57,7 +58,7 @@ const MenuWrapper = styled.div<{ isOpen: boolean }>`
 
   @media (max-width: 768px) {
     display: ${(props) => (props.isOpen ? "flex" : "none")};
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     flex-direction: column;
     z-index: 50;
     position: absolute;
@@ -77,7 +78,7 @@ const MenuWrapper = styled.div<{ isOpen: boolean }>`
       border-bottom: 1px #ccc;
       border-bottom-style: solid;
       padding: 1rem 0;
-      
+
       a {
         font-size: 1.25rem;
       }
@@ -116,7 +117,9 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
   return (
     <NavbarWrapper>
-      <Logo href="/">@bonomoon</Logo>
+      <LogoLink href="/">
+        <Logo width={110} height={54} viewBox={"0 0 120 64"} />
+      </LogoLink>
       <HamburgerIcon onClick={toggleMenu}>
         <div />
         <div />
