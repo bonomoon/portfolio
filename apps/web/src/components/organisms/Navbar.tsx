@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Menu, MenuItemProps } from "@components/molecules/Menu";
 import Link from "next/link";
 import styled from "styled-components";
@@ -18,7 +19,7 @@ const NavbarWrapper = styled.div`
  * Styled Logo component.
  */
 const Logo = styled(Link)`
-  font-family: 'Inter', san-serif;
+  font-family: "Inter", san-serif;
   font-size: 1.625rem;
   font-weight: bold;
   color: #000;
@@ -26,8 +27,65 @@ const Logo = styled(Link)`
 `;
 
 /**
+ * Condensed menu list.
+ */
+const HamburgerIcon = styled.div`
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+
+  div {
+    width: 100%;
+    height: 2px;
+    background: #000;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
+/**
+ * Support display changes of Menu.
+ */
+const MenuWrapper = styled.div<{ isOpen: boolean }>`
+  display: flex;
+
+  @media (max-width: 768px) {
+    display: ${(props) => (props.isOpen ? "flex" : "none")};
+    flex-direction: column;
+    z-index: 50;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    padding: 1rem 1.25rem;
+    text-align: right;
+
+    ul {
+      flex-direction: column;
+    }
+
+    li {
+      margin-right: 0;
+      border-bottom: 1px #ccc;
+      border-bottom-style: solid;
+      padding: 1rem 0;
+      
+      a {
+        font-size: 1.25rem;
+      }
+    }
+  }
+`;
+
+/**
  * Props for the Navbar component.
- * 
+ *
  * @typedef {object} NavbarProps
  * @property {MenuItemProps[]} links - Array of MenuItemProps for the menu items.
  */
@@ -37,16 +95,29 @@ type NavbarProps = {
 
 /**
  * Navbar component.
- * 
+ *
  * @param {NavbarProps} props
  * @returns {React.FC}
  */
-const Navbar: React.FC<NavbarProps> = ({links}) => {
+const Navbar: React.FC<NavbarProps> = ({ links }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-      <NavbarWrapper>
-        <Logo href="/">@bonomoon</Logo>
+    <NavbarWrapper>
+      <Logo href="/">@bonomoon</Logo>
+      <HamburgerIcon onClick={toggleMenu}>
+        <div />
+        <div />
+        <div />
+      </HamburgerIcon>
+      <MenuWrapper isOpen={isOpen}>
         <Menu items={links} />
-      </NavbarWrapper>
+      </MenuWrapper>
+    </NavbarWrapper>
   );
 };
 
