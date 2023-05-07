@@ -50,7 +50,6 @@ type MenuProps = {
 export type MenuItemProps = {
   name: string;
   target?: "_self" | "_blank" | undefined;
-  active: boolean;
 } & LinkProps;
 
 /**
