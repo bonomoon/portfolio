@@ -20,11 +20,10 @@ const MenuItem = styled.li<{active: boolean}>`
   margin-right: 2rem;
 
   a {
-    font-weight: ${({active}) => (active ? '500' : '400')};
     color: ${({active}) => (active ? '#1C35EC' : '#181717')};
 
     &:hover {
-      color: #0d1a7c;
+      color: #162595;
     }
   }
   

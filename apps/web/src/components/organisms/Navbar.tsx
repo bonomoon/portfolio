@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, MenuItemProps } from "@components/molecules/Menu";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
 /**
@@ -101,6 +102,12 @@ type NavbarProps = {
  */
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [router.pathname]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
