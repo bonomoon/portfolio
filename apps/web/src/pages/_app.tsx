@@ -13,7 +13,7 @@ import Layout from "@components/templates/Layout";
  * @param {AppProps} props - Props for the App component, including the Component and its pageProps
  * @returns {JSX.Element} The rendered App component with the specific page component and its props
  */
-export default function App({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Component {...pageProps} />

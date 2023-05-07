@@ -1,4 +1,5 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import { ServerStyleSheet } from 'styled-components';
 
 /**
  * Custom Document component in Next.js.
@@ -8,7 +9,7 @@ import { Html, Head, Main, NextScript } from "next/document";
  * Note: This component is only rendered on the server side.
  * Do not include any application logic here.
  */
-export default function Document() {
+function MyDocument() {
   return (
     <Html>
       <Head>
@@ -27,3 +28,35 @@ export default function Document() {
     </Html>
   );
 }
+
+/**
+ * Use the ServerStyleSheet class from styled-components to collect all the styles used in your application
+ * and include them in the server-rendered HTML response.
+ */
+MyDocument.getInitialProps = async (ctx: DocumentContext) => {
+  const sheet = new ServerStyleSheet();
+  const originalRenderPage = ctx.renderPage;
+
+  try {
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: (App) => (props) =>
+          sheet.collectStyles(<App {...props} />),
+      });
+
+    const initialProps = await Document.getInitialProps(ctx);
+    return {
+      ...initialProps,
+      styles: (
+        <>
+          {initialProps.styles}
+          {sheet.getStyleElement()}
+        </>
+      ),
+    };
+  } finally {
+    sheet.seal();
+  }
+};
+
+export default MyDocument;
