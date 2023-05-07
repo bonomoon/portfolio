@@ -57,10 +57,11 @@ const MenuWrapper = styled.div<{ isOpen: boolean }>`
 
   @media (max-width: 768px) {
     display: ${(props) => (props.isOpen ? "flex" : "none")};
+    background-color: #FAFAFA;
     flex-direction: column;
     z-index: 50;
     position: absolute;
-    top: 68px;
+    top: 65px;
     right: 0;
     left: 0;
     height: 100vh;

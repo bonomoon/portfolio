@@ -1,6 +1,7 @@
-import Header from "@components/organisms/Header";
 import { ReactNode } from "react";
 import styled from "styled-components";
+import Header from "@components/organisms/Header";
+import Main from "@components/organisms/Main";
 
 /**
  * Styled Container component for the layout
@@ -31,7 +32,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => (
   <Container>
     <Header />
-    {children}
+    <Main>{children}</Main>
   </Container>
 );
 
