@@ -10,6 +10,7 @@
     "start": "next start "
   },
   "dependencies": {
+    "@svgr/webpack": "^7.0.0",
     "logger": "workspace:*",
     "next": "latest",
     "react": "^18.2.0",
