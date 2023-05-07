@@ -1,4 +1,5 @@
 import { LinkProps } from "next/link";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import MenuLink from "@components/atoms/MenuLink";
 
@@ -15,8 +16,18 @@ const MenuContainer = styled.ul`
 /**
  * Styled menu item component
  */
-const MenuItem = styled.li`
+const MenuItem = styled.li<{active: boolean}>`
   margin-right: 2rem;
+
+  a {
+    font-weight: ${({active}) => (active ? '500' : '400')};
+    color: ${({active}) => (active ? '#1C35EC' : '#181717')};
+
+    &:hover {
+      color: #0d1a7c;
+    }
+  }
+  
   &:last-child {
     margin-right: 0;
   }
@@ -39,19 +50,20 @@ type MenuProps = {
 export type MenuItemProps = {
   name: string;
   target?: "_self" | "_blank" | undefined;
+  active: boolean;
 } & LinkProps;
 
 /**
  * Menu component to render a list of menu items
- * 
+ *
  * @param {MenuProps} props
  * @returns {React.FC}
  */
-export const Menu = (props: MenuProps) => {
-  const items = props.items;
-
+export const Menu: React.FC<MenuProps> = ({ items }) => {
+  const router = useRouter();
+  
   let menuItems = items.map((item, index) => (
-    <MenuItem key={index}>
+    <MenuItem key={index} active={item.href === router.pathname}>
       <MenuLink href={item.href} target={item.target ?? "_self"}>
         {item.name}
       </MenuLink>
