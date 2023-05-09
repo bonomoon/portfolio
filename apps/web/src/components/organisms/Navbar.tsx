@@ -110,7 +110,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
   useEffect(() => {
     setIsOpen(false);
-  }, [router.pathname]);
+  }, [router]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
