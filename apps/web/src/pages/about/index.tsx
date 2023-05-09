@@ -1,5 +1,6 @@
 import Head from "next/head";
 import MainHeader from "@components/organisms/MainHeader";
+import MainFooter from "@components/organisms/MainFooter";
 
 export default function About() {
   return (
@@ -10,6 +11,7 @@ export default function About() {
       <MainHeader title={`Hello, I'm\nBong-oh Moon,\nSoftware Engineer.`}>
 
       </MainHeader>
+      <MainFooter />
     </>
   );
 }

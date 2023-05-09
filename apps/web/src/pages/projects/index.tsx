@@ -1,6 +1,7 @@
 import Head from "next/head";
 import MainHeader from "@components/organisms/MainHeader";
 import Section from "@components/molecules/Section";
+import MainFooter from "@components/organisms/MainFooter";
 
 export default function Projects() {
   return (
@@ -15,6 +16,7 @@ export default function Projects() {
       <Section title={"All Projects"}>
         <></>
       </Section>
+      <MainFooter />
     </>
   );
 }

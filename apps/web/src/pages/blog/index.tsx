@@ -1,6 +1,7 @@
 import Head from "next/head";
 import MainHeader from "@components/organisms/MainHeader";
 import Section from "@components/molecules/Section";
+import MainFooter from "@components/organisms/MainFooter";
 
 export default function Blog() {
   return (
@@ -12,6 +13,7 @@ export default function Blog() {
       <Section title={"All Posts"}>
         <></>
       </Section>
+      <MainFooter />
     </>
   );
 }
