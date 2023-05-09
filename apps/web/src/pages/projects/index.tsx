@@ -4,7 +4,7 @@ import Section from "@components/molecules/Section";
 
 export default function Projects() {
   return (
-    <div>
+    <>
       <Head>
         <title>Projects | Bong-oh Moon</title>
       </Head>
@@ -15,6 +15,6 @@ export default function Projects() {
       <Section title={"All Projects"}>
         <></>
       </Section>
-    </div>
+    </>
   );
 }

@@ -4,7 +4,7 @@ import Section from "@components/molecules/Section";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Bong-oh Moon</title>
       </Head>
@@ -12,6 +12,6 @@ export default function Home() {
       <Section title={"Recent Posts"}>
         <></>
       </Section>
-    </div>
+    </>
   );
 }
