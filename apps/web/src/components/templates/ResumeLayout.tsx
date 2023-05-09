@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import AchievementSection from "@components/organisms/resume/AchievementSection";
 import ActivitySection from "@components/organisms/resume/ActivitySection";
 import EducationSection from "@components/organisms/resume/EducationSection";
@@ -9,6 +10,14 @@ import {
   ExperienceType,
   SkillType,
 } from "@components/organisms/resume/types";
+
+const SectionWrapper = styled.div`
+  &:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+`;
 
 /**
  * Resume Layout Props
@@ -42,9 +51,16 @@ const ResumeLayout: React.FC<ResumeLayoutProps> = ({
 }) => {
   return (
     <div>
-      <ExperienceSection items={experienceList} />
-      <EducationSection items={educationList} />
-      <ActivitySection items={activityList} />
+      <SectionWrapper>
+        <ExperienceSection items={experienceList} />
+      </SectionWrapper>
+      <SectionWrapper>
+        <EducationSection items={educationList} />
+      </SectionWrapper>
+      {/* <SkillSection items={skillList} /> */}
+      <SectionWrapper>
+        <ActivitySection items={activityList} />
+      </SectionWrapper>
       <AchievementSection items={achievementList} />
     </div>
   );
