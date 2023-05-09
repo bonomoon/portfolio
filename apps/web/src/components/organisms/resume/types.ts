@@ -97,6 +97,21 @@ export interface ActivityType {
   details: NestedListItemType<string>[];
 }
 
-export interface AwardType {}
+/**
+ * Award type interface.
+ * 
+ * @property {string} prize Prize name.
+ * @property {string} contest Contest name.
+ * @property {Date} awardedAt A date which you awarded at.
+ * @property {string} organization Main organization which take place this event.
+ * @property {NestedListItemType<string>[]} details Award details.
+ */
+export interface AwardType {
+  prize: string;
+  contest: string;
+  awardedAt: Date;
+  organization: string;
+  details: NestedListItemType<string>[];
+}
 
 export interface SkillType {}

@@ -1,5 +1,6 @@
 import {
   ActivityType,
+  AwardType,
   EducationType,
   ExperienceType,
 } from "@components/organisms/resume/types";
@@ -352,6 +353,86 @@ export const activityList: ActivityType[] = [
       {
         value:
           "Conducted study group mentoring(C programming language) and organized hackathon.",
+      },
+    ],
+  },
+];
+
+export const awardList: AwardType[] = [
+  {
+    prize: "Chainapsis Track 3rd Winner",
+    contest: "Junction Asia 2022",
+    awardedAt: new Date(2022, 7),
+    organization: "SHIFT/Junction",
+    details: [
+      {
+        value:
+          "RIO: Blockchain Powered Platform for Personal Record Counterfeit Proof.",
+      },
+      {
+        value:
+          "5 Members (1 planner, 1 designer, 3 developers) - Back-end Developer responsible for developing blockchain smart contracts and server-side application.",
+      },
+    ],
+  },
+  {
+    prize: "SI Analytics(SIA) Track 1rd Winner",
+    contest: "JunctionXSeoul 2020",
+    awardedAt: new Date(2022, 7),
+    organization: "SHIFT/Junction",
+    details: [
+      {
+        value:
+          "SUMO: SUstainability MOnitoring system, makes it able to search for factories and check where their waste is actually going by using satellite images.",
+      },
+      {
+        value:
+          "5 Members (1 planner, 2 designer, 2 developers) - Front-end Developer.",
+      },
+    ],
+  },
+  {
+    prize: "2rd Prize",
+    contest: "7th K-Hackathon XR Application Challenge",
+    awardedAt: new Date(2019, 10),
+    organization: "SWKorea",
+    details: [
+      {
+        value: "I Can Speak: VR Service for Public Speaking Simulation",
+      },
+      {
+        value:
+          "5 members (1 planner, 4 developers) - Team leader and Front-end developer",
+      },
+    ],
+  },
+  {
+    prize: "3rd Prize",
+    contest: "6th K-Hackathon Application Challenge",
+    awardedAt: new Date(2018, 10),
+    organization: "SWKorea",
+    details: [
+      {
+        value:
+          "Find me: Self-reflection and mental health solution for college students in their 20s.",
+      },
+      {
+        value: "5 members (1 planner, 4 developers) - Android developer",
+      },
+    ],
+  },
+  {
+    prize: "2nd Prize",
+    contest: "5th JBNU IDEA Hackathon",
+    awardedAt: new Date(2019, 4),
+    organization: "Jeonbuk National University",
+    details: [
+      {
+        value: "Flip Babe: Infant rollover accident prevention IoT solution.",
+      },
+      {
+        value:
+          "5 members (1 planner, 4 developers) - Team leader and Android developer.",
       },
     ],
   },
