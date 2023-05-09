@@ -12,7 +12,7 @@ import {
 
 /**
  * Resume Layout Props
- * 
+ *
  * @property {ExperienceType[]} experienceList Experience items of Resume
  * @property {EducationType[]} educationList Education items of Resume
  * @property {SkillType[]} skillList Skill items of Resume
@@ -29,7 +29,7 @@ type ResumeLayoutProps = {
 
 /**
  * Resume Layout Template.
- * 
+ *
  * @param {ResumeLayoutProps}
  * @returns {React.FC}
  */
@@ -49,3 +49,5 @@ const ResumeLayout: React.FC<ResumeLayoutProps> = ({
     </div>
   );
 };
+
+export default ResumeLayout;

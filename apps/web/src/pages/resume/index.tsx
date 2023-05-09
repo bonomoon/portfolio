@@ -1,6 +1,7 @@
-import Head from "next/head";
 import MainHeader from "@components/organisms/MainHeader";
-import Section from "@components/molecules/Section";
+import ResumeLayout from "@components/templates/ResumeLayout";
+import Head from "next/head";
+import { activityList, awardList, educationList, experienceList } from "./data";
 
 export default function Resume() {
   return (
@@ -9,23 +10,13 @@ export default function Resume() {
         <title>Resume | Bong-oh Moon</title>
       </Head>
       <MainHeader title="Bong-oh Moon" />
-      <div>
-        <Section title={"Experience"}>
-          <></>
-        </Section>
-        <Section title={"Education"}>
-          <></>
-        </Section>
-        <Section title={"Skill"}>
-          <></>
-        </Section>
-        <Section title={"Activity"}>
-          <></>
-        </Section>
-        <Section title={"Achievement"}>
-          <></>
-        </Section>
-      </div>
+      <ResumeLayout
+        experienceList={experienceList}
+        educationList={educationList}
+        skillList={[]}
+        activityList={activityList}
+        achievementList={awardList}
+      />
     </>
   );
 }
