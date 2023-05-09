@@ -26,7 +26,7 @@ const Title = styled.h1`
 /**
  * Main header description. 
  */
-const Description = styled.h5`
+export const Description = styled.h5`
   color: #6c6c6c;
   font-weight: 400;
 
