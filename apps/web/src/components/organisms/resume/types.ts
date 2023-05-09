@@ -37,10 +37,51 @@ export interface ExperienceType {
   details: NestedListItemType<string>[];
 }
 
+/**
+ * GPA type interface
+ * 
+ * @property {number} score Current score.
+ * @property {number} maxScore Maximum score of GPA.
+ */
+interface GPAType {
+  score: number;
+  maxScore: number;
+}
+
+/**
+ * Degree type interface.
+ * 
+ * @property {string} name The name of degree type.
+ * @property {string} major The major of degree.
+ * @property {GPAType} gpa GPA
+ */
+interface DegreeType {
+  name: string;
+  major: string;
+  gpa: GPAType;
+}
+
+/**
+ * Education type interface.
+ * 
+ * @property {string} institution Education organization.
+ * @property {string} country The location of institution.
+ * @property {boolean} isDegreeProgram Check degree program or others
+ * @property {DegreeType} degree Degree info.
+ * @property {DurationType} duration Education period.
+ * @property {NestedListItemType<string>[]} details Educational achievement details
+ */
+export interface EducationType {
+  institution: string;
+  country: string;
+  isDegreeProgram: boolean;
+  degree?: DegreeType;
+  duration: DurationType;
+  details: NestedListItemType<string>[];
+}
+
 export interface ActivityType {}
 
 export interface AwardType {}
-
-export interface EducationType {}
 
 export interface SkillType {}
