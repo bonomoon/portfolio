@@ -42,10 +42,10 @@ const ResumeLayout: React.FC<ResumeLayoutProps> = ({
 }) => {
   return (
     <div>
-      <ExperienceSection />
-      <EducationSection />
-      <ActivitySection />
-      <AchievementSection />
+      <ExperienceSection items={experienceList} />
+      <EducationSection items={educationList} />
+      <ActivitySection items={activityList} />
+      <AchievementSection items={achievementList} />
     </div>
   );
 };

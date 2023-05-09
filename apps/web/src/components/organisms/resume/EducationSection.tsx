@@ -1,11 +1,14 @@
 import Section from "@components/molecules/Section";
+import { EducationType } from "./types";
 
-const EducationSection = () => {
-    return (
-        <Section title="Education">
-            
-        </Section>
-    )
-}
+type EducationSectionProps = {
+  items: EducationType[];
+};
+
+const EducationSection = (props: EducationSectionProps) => (
+  <Section title="Education">
+    <></>
+  </Section>
+);
 
 export default EducationSection;

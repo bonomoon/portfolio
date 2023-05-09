@@ -1,11 +1,14 @@
 import Section from "@components/molecules/Section";
+import { ExperienceType } from "./types";
 
-const ExperienceSection = () => {
-    return (
-        <Section title="Experience">
-            
-        </Section>
-    )
-}
+type ExperienceSectionProps = {
+  items: ExperienceType[];
+};
+
+const ExperienceSection = (props: ExperienceSectionProps) => (
+  <Section title="Experience">
+    <></>
+  </Section>
+);
 
 export default ExperienceSection;

@@ -1,11 +1,14 @@
 import Section from "@components/molecules/Section";
+import { ActivityType } from "./types";
 
-const ActivitySection = () => {
-    return (
-        <Section title="Activity">
-            
-        </Section>
-    )
-}
+type ActivitySectionProps = {
+  items: ActivityType[];
+};
+
+const ActivitySection = (props: ActivitySectionProps) => (
+  <Section title="Activity">
+    <></>
+  </Section>
+);
 
 export default ActivitySection;
