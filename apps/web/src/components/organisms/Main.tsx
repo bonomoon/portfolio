@@ -8,7 +8,7 @@ const MainContainer = styled.main`
   justify-content: flex-start;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 80px 0 120px 0;
+  padding: 7rem 0 8rem 0;
 `;
 
 type MainProps = {
