@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Container from "@components/atoms/Container";
+import { Menu, MenuItemProps } from "@components/molecules/Menu";
 
 /**
  * Styled footer container component.
@@ -14,12 +16,44 @@ const FooterContainer = styled.footer`
 `;
 
 /**
+ * Styled text for License.
+ */
+const License = styled.span`
+    color: #2429AF;
+    font-weight: 500;
+    font-size: 18px;
+`;
+
+// Nav links
+const menuItems : Array<MenuItemProps> = [
+  {
+    href: "https://github.com/bonomoon",
+    name: "Github",
+    icon: <FaGithub />,
+    target: '_blank'
+  },
+  {
+    href: "https://linkedin.com/in/bong-oh-moon",
+    name: "LinkedIn",
+    icon: <FaLinkedin />,
+    target: '_blank'
+  },
+  {
+    href: "https://www.instagram.com/bono__moon",
+    name: "Instagram",
+    icon: <FaInstagram />,
+    target: '_blank'
+  },
+];
+
+/**
  * Footer component.
  */
 const Footer = () => (
   <FooterContainer>
     <Container>
-
+      <License>Bong-oh Moon ⏤ © 2023</License>
+      <Menu items={menuItems} />  
     </Container>
   </FooterContainer>
 );
