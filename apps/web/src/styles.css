@@ -72,7 +72,8 @@ p, pre {
 
 label {
   font-size: 0.812rem;
-  color: #606060;
+  color: #333;
+  font-weight: 500;
 }
 
 caption {
