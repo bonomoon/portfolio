@@ -18,12 +18,12 @@ const MenuContainer = styled.ul`
  */
 const MenuItem = styled.li<{active: boolean}>`
   margin-right: 2rem;
-
+  
   a {
-    color: ${({active}) => (active ? '#1C35EC' : '#181717')};
+    color: ${({active}) => (active ? '#1C35EC' : '#666')};
 
     &:hover {
-      color: #162595;
+      color: #2429AF;
     }
   }
   
