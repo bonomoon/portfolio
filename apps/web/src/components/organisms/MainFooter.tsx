@@ -22,6 +22,10 @@ const MainFooterRight = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 `;
 
 const MainFooterLink = styled(Link)`
