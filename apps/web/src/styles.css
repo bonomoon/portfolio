@@ -9,6 +9,10 @@ html {
   line-height: 1.2;
   letter-spacing: -0.03em;
   tab-size: 4;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -61,7 +65,7 @@ h6 {
   font-size: 1.250rem;
 }
 
-p {
+p, pre {
   font-size: 1rem;
   font-family: 'Inter', sans-serif;
 }
