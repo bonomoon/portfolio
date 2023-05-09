@@ -41,7 +41,7 @@ const MainHeaderRightTag = styled.h6`
  * Styled main header link component.
  */
 const AboutLink = styled(Link)`
-  color: #4c4c4c;
+  color: #333;
   font-size: 1.125rem;
   font-weight: 500;
 
