@@ -45,9 +45,9 @@ const MainFooter = () => (
   <MainFooterContainer>
     <MainFooterLeft>
       <h4>
-        If you'd like to talk about
+        If you&apos;d like to talk about
         <br />
-        my next career{" "}
+        my next career
         <span style={{ fontWeight: 600, marginLeft: "1.5rem" }}>→</span>
       </h4>
     </MainFooterLeft>
