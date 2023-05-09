@@ -35,6 +35,10 @@ const SectionTitle = styled.h3`
 const SectionLink = styled(Link)`
   font-family: "Inter";
   color: #9e9e9e;
+
+  &:hover {
+    color: #333;
+  }
 `;
 
 /**
