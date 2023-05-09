@@ -11,6 +11,12 @@ import { EducationType } from "./types";
 const createEducationTitle = (institution: string, country: string) =>
   institution + ", " + country;
 
+/**
+ * Education List Item.
+ * 
+ * @param props 
+ * @returns {React.FC}
+ */
 const EducationListItem: React.FC<EducationType> = ({
   institution,
   country,
