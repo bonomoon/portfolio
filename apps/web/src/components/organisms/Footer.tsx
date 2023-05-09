@@ -24,6 +24,14 @@ const FooterWrapper = styled.div`
   flex-direction: rows;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 2rem;
+  margin-top: 100px;
+
+  @media (max-width: 480px) {
+    flex-direction: column-reverse;
+    gap: 1.25rem;
+  }
 `;
 
 /**
