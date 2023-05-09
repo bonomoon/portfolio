@@ -5,7 +5,7 @@ import AwardListItem from "./AwardListItem";
 /**
  * Achievement Section component props
  * 
- * @property {EducationType[]} items The type of list item in section.
+ * @property {AwardType[]} items The type of list item in section.
  */
 type AchievementSectionProps = {
   items: AwardType[];
