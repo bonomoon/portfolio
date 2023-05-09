@@ -9,7 +9,7 @@ export default function Home() {
         <title>Bong-oh Moon</title>
       </Head>
       <MainHeader title={`Hello, I'm\nBong-oh Moon.`} />
-      <Section title={"Recent Posts"}>
+      <Section title={"Recent Posts"} link={{value: '/blog', name: 'More posts'}}>
         <></>
       </Section>
     </>
