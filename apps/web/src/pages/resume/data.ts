@@ -1,4 +1,8 @@
-import { EducationType, ExperienceType } from "@components/organisms/resume/types";
+import {
+  ActivityType,
+  EducationType,
+  ExperienceType,
+} from "@components/organisms/resume/types";
 
 export const experienceList: ExperienceType[] = [
   {
@@ -181,6 +185,173 @@ export const educationList: EducationType[] = [
       {
         value:
           "Awarded the Grand Prize, demonstrating entrepreneurship and innovation skills",
+      },
+    ],
+  },
+];
+
+export const activityList: ActivityType[] = [
+  {
+    name: "I am Root",
+    description: "20th Linux Kernel Academic Group",
+    duration: {
+      startedAt: new Date(2023, 4),
+      isCompleted: false,
+    },
+    details: [
+      {
+        value: `Currently studying about Linux kernel internal structure as a member.`,
+      },
+    ],
+  },
+  {
+    name: "No Name Open Source",
+    description: "Side Project Team",
+    duration: {
+      startedAt: new Date(2022, 8),
+      isCompleted: false,
+    },
+    details: [
+      {
+        value: "Desk: Web Front-end Application Container Framework.",
+      },
+      {
+        value:
+          "Currently contributing to legacy code refactoring and the development of new features.",
+      },
+    ],
+  },
+  {
+    name: "GeNovation",
+    description: "Side Project Team",
+    duration: {
+      startedAt: new Date(2022, 7),
+      isCompleted: false,
+    },
+    details: [
+      {
+        value:
+          "RIO: Blockchain Powered Platform for Personal Record Counterfeit Proof.",
+      },
+      {
+        value:
+          "5 Members (1 planner, 1 designer, 3 developers) - Back-end Developer responsible for developing blockchain smart contracts and server-side application.",
+      },
+      {
+        value: "Currently filing for a patent in the United States.",
+      },
+      {
+        value: "Awarded Chainapsis Track 3rd Winner, Junction Asia 2022",
+      },
+    ],
+  },
+  {
+    name: "AM:PM",
+    description: "Software Engineering Academic Club",
+    organization: "JBNU",
+    duration: {
+      startedAt: new Date(2018, 2),
+      isCompleted: false,
+    },
+    details: [
+      {
+        value: "Currently serving as a student guru in the club.",
+      },
+      {
+        value: "One of the founders and served as the leader in 2019.",
+      },
+      {
+        value:
+          "Conducted study group mentoring(algorithm, web, OOP...) and organized hackathon.",
+      },
+    ],
+  },
+  {
+    name: "AWS Educate Student Ambassador",
+    organization: "AWS",
+    duration: {
+      startedAt: new Date(2020, 3),
+      endedAt: new Date(2021, 6),
+      isCompleted: true,
+    },
+    details: [
+      {
+        value:
+          "As an AWS Student Ambassador, introduced AWS products to local startups and conducted lectures on campus.",
+      },
+    ],
+  },
+  {
+    name: "J-DevOps",
+    description: "Operating System Lab",
+    organization: "JBNU",
+    duration: {
+      startedAt: new Date(2017, 3),
+      endedAt: new Date(2019, 10),
+      isCompleted: true,
+    },
+    details: [
+      {
+        value: "J-Cloud: Openstack based IaaS in JBNU.",
+      },
+      {
+        value:
+          "Undergraduate researcher, Openstack-based cloud infrastructure service team.",
+      },
+      {
+        value:
+          "Researched building an OpenStack-based platform and creating GPU instances in J-Cloud.",
+      },
+    ],
+  },
+  {
+    name: "Wayseekers",
+    description: "Student Startup Team",
+    organization: "JBNU",
+    duration: {
+      startedAt: new Date(2017, 1),
+      endedAt: new Date(2018, 1),
+      isCompleted: true,
+    },
+    details: [
+      {
+        value:
+          "Wayfit: IoT home fitness gamification platform for people who work out with short-lived motivation.",
+      },
+      {
+        value:
+          "As CTO, successfully led the development of Wayfit, which involved designing and building a watch-type motion measurement device prototype and managing the outsourcing process for the Wayfit mobile application.",
+      },
+      {
+        value:
+          "Secured a $20,000 investment from JBNU and multiple supporting investors.",
+      },
+      {
+        value:
+          "Awarded as “The Best University Start-up Club Team” by the Ministry of Education in Republic of Korea.",
+      },
+      {
+        value:
+          "Awarded 3rd place in the K-Global Startup competition, organized by the Ministry of Science, ICT, and Future Planning in Republic of Korea.Currently contributing to legacy code refactoring and the development of new features.",
+      },
+    ],
+  },
+  {
+    name: "WHO",
+    description: "OS and Cloud Computing Academic Club",
+    organization: "JBNU",
+    duration: {
+      startedAt: new Date(2016, 2),
+      endedAt: new Date(2017, 11),
+      isCompleted: true,
+    },
+    details: [
+      {
+        value: "Studied OS and cloud computing.",
+      },
+      {
+        value:
+          "Conducted study group mentoring(C programming language) and organized hackathon.",
       },
     ],
   },

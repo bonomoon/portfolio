@@ -66,10 +66,10 @@ interface DegreeType {
  * 
  * @property {string} institution Education organization.
  * @property {string} country The location of institution.
- * @property {boolean} isDegreeProgram Check degree program or others
+ * @property {boolean} isDegreeProgram Check degree program or others.
  * @property {DegreeType} degree Degree info.
  * @property {DurationType} duration Education period.
- * @property {NestedListItemType<string>[]} details Educational achievement details
+ * @property {NestedListItemType<string>[]} details Educational achievement details.
  */
 export interface EducationType {
   institution: string;
@@ -80,7 +80,22 @@ export interface EducationType {
   details: NestedListItemType<string>[];
 }
 
-export interface ActivityType {}
+/**
+ * Activity type interface.
+ * 
+ * @property {string} name Activity's name.
+ * @property {string} description Activity's description.
+ * @property {string} organization Main organization which take place this activity.
+ * @property {DurationType} duration Activity period.
+ * @property {NestedListItemType<string>[]} details Activity details.
+ */
+export interface ActivityType {
+  name: string;
+  description?: string;
+  organization?: string;
+  duration: DurationType;
+  details: NestedListItemType<string>[];
+}
 
 export interface AwardType {}
 
