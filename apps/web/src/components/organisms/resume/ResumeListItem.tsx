@@ -11,6 +11,7 @@ import {
  * @property {Date | DurationType} duration Something period.
  * @property {string} description Additional description.
  * @property {NestedListItemType<string>[]} details a details of something.
+ * @property {boolean} horizontal List item should be horizontal. (default: false)
  */
 type ResumeListItemProps = {
   title: string;
@@ -18,6 +19,7 @@ type ResumeListItemProps = {
   duration: Date | DurationType;
   description?: string;
   details: NestedListItemType<string>[];
+  horizontal?: boolean;
 };
 
 /**
@@ -32,6 +34,7 @@ const ResumeListItem: React.FC<ResumeListItemProps> = ({
   duration,
   description,
   details,
+  horizontal
 }) => (
   <div>
     {title}
