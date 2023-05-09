@@ -25,7 +25,7 @@ const MainFooterRight = styled.div`
 `;
 
 const MainFooterLink = styled(Link)`
-  color: #181717;
+  color: #232323;
 
   &:hover {
     color: #666;
@@ -48,10 +48,14 @@ const MainFooter = () => (
       </h4>
     </MainFooterLeft>
     <MainFooterRight>
-      <MainFooterLink href="mailto:bongohmoon@gmail.com">
-        <h5>bongohmoon@gmail.com</h5>
-      </MainFooterLink>
-      <MainFooterLink href="/resume">View Resume ↗</MainFooterLink>
+      <div>
+        <MainFooterLink href="mailto:bongohmoon@gmail.com">
+          <h5 style={{display: 'inline'}}>bongohmoon@gmail.com</h5>
+        </MainFooterLink>
+      </div>
+      <div>
+        <MainFooterLink href="/resume">View Resume ↗</MainFooterLink>
+      </div>
     </MainFooterRight>
   </MainFooterContainer>
 );
