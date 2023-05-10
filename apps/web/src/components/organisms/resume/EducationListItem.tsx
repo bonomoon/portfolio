@@ -26,7 +26,7 @@ const EducationListItem: React.FC<EducationType> = ({
   details,
 }) => {
   // Create degree text.
-  const _degree = () => `Degree: ${duration.isCompleted && "Pursuing"} ${degree?.name}'s degree in ${degree?.major}`;
+  const _degree = () => `Degree: ${duration.isCompleted ? "" : "Pursuing"} ${degree?.name}'s degree in ${degree?.major}`;
 
   // Create GPA text.
   const _gpa = () => `GPA: ${degree?.gpa.score } / ${degree?.gpa.maxScore}`;
