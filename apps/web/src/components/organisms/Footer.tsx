@@ -26,7 +26,7 @@ const FooterWrapper = styled.div`
   justify-content: space-between;
   border-top: 1px solid #ccc;
   padding-top: 2rem;
-  margin-top: 100px;
+  margin-top: 3rem;
 
   @media (max-width: 480px) {
     flex-direction: column-reverse;
