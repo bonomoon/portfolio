@@ -1,7 +1,7 @@
 import MainHeader from "@components/organisms/MainHeader";
 import ResumeLayout from "@components/templates/ResumeLayout";
 import Head from "next/head";
-import { activityList, awardList, educationList, experienceList } from "./data";
+import { activityList, awardList, educationList, experienceList } from "src/data";
 
 export default function Resume() {
   return (
