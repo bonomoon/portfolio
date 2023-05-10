@@ -1,13 +1,4 @@
-/**
- * Nested List Item type interface
- * 
- * @property {T} value Stored data type
- * @property {NestedListItemType<T>[]} children Value's children data
- */
-export interface NestedListItemType<T> {
-  value: T;
-  children?: NestedListItemType<T>[];
-}
+import { NestedListItemType } from "../NestedList";
 
 /**
  * Duration type interface.
