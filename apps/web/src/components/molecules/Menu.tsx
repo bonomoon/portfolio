@@ -1,3 +1,4 @@
+import { ReactNode} from "react";
 import { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
@@ -18,12 +19,12 @@ const MenuContainer = styled.ul`
  */
 const MenuItem = styled.li<{active: boolean}>`
   margin-right: 2rem;
-
+  
   a {
-    color: ${({active}) => (active ? '#1C35EC' : '#181717')};
+    color: ${({active}) => (active ? '#1C35EC' : '#666')};
 
     &:hover {
-      color: #162595;
+      color: #2429AF;
     }
   }
   
@@ -48,6 +49,7 @@ type MenuProps = {
  */
 export type MenuItemProps = {
   name: string;
+  icon?: ReactNode;
   target?: "_self" | "_blank" | undefined;
 } & LinkProps;
 
@@ -63,7 +65,7 @@ export const Menu: React.FC<MenuProps> = ({ items }) => {
   let menuItems = items.map((item, index) => (
     <MenuItem key={index} active={item.href === router.pathname}>
       <MenuLink href={item.href} target={item.target ?? "_self"}>
-        {item.name}
+        {item.icon ?? item.name}
       </MenuLink>
     </MenuItem>
   ));

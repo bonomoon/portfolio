@@ -20,7 +20,8 @@ const NavbarWrapper = styled.div`
 /**
  * Styled Logo component.
  */
-const LogoLink = styled(Link)`
+const LogoLink = styled(Link)`  
+  display: flex;
   font-family: "Inter", san-serif;
   font-size: 1.625rem;
   font-weight: bold;
@@ -67,7 +68,6 @@ const MenuWrapper = styled.div<{ isOpen: boolean }>`
     left: 0;
     height: 100vh;
     padding: 1rem 1.25rem;
-    text-align: right;
 
     ul {
       flex-direction: column;
@@ -81,6 +81,7 @@ const MenuWrapper = styled.div<{ isOpen: boolean }>`
 
       a {
         font-size: 1.25rem;
+        justify-content: flex-end;
       }
     }
   }
@@ -109,7 +110,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
   useEffect(() => {
     setIsOpen(false);
-  }, [router.pathname]);
+  }, [router]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -118,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
     <NavbarWrapper>
       <LogoLink href="/">
-        <Logo width={110} height={54} viewBox={"0 0 120 64"} />
+        <Logo viewBox={'0, 0, 110, 30'} />
       </LogoLink>
       <HamburgerIcon onClick={toggleMenu}>
         <div />
