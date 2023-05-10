@@ -14,12 +14,12 @@ const MainHeaderContainer = styled.div`
  * Main header title.
  */
 const Title = styled.h1`
-  line-height: 3.5rem;
+  line-height: 4rem;
   white-space: pre;
 
   @media (max-width: 480px) {
     font-size: 3.062rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
   }
 `;
 

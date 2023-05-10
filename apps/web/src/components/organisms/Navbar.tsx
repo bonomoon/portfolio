@@ -119,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
     <NavbarWrapper>
       <LogoLink href="/">
-        <Logo viewBox={'0, 0, 110, 30'} />
+        <Logo width={88} height={28} viewBox={'0, 0, 88, 28'} />
       </LogoLink>
       <HamburgerIcon onClick={toggleMenu}>
         <div />

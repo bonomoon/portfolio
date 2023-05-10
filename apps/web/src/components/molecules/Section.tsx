@@ -26,7 +26,7 @@ const SectionHeader = styled.div`
  */
 const SectionTitle = styled.h3`
   font-weight: 600;
-  color: #0e0e6c;
+  color: #1b1f87;
 `;
 
 /**
