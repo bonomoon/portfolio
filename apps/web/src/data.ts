@@ -8,7 +8,7 @@ import {
 export const experienceList: ExperienceType[] = [
   {
     company: "Republic of Korea Air Force(ROKAF)",
-    job: "Software Engineering",
+    job: "Software Engineer",
     duration: {
       startedAt: new Date(2020, 11),
       endedAt: new Date(2022, 8),

@@ -33,8 +33,9 @@ const MainHeaderRight = styled.div`
  * Styled tag component in main header right component.
  */
 const MainHeaderRightTag = styled.h6`
-  color: #ff4a4a;
-  font-weight: 500;
+  color: #595ddc;
+  font-weight: 600;
+  font-style: italic;
 `;
 
 /**
@@ -67,7 +68,7 @@ export default function Home() {
           </MainHeaderDescription>
         </MainHeaderRight>
       </MainHeaderWrapper>
-      <div style={{marginBottom: '1.5rem'}}>
+      <div style={{ marginBottom: "1.5rem" }}>
         <AboutLink href={"/about"}>More about me ↗</AboutLink>
       </div>
       <Section
